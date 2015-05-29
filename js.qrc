@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>js/globalConstant.js</file>
+    </qresource>
+</RCC>

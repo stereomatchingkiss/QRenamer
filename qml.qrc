@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Main.qml</file>
+        <file>qml/MethodsList.qml</file>
+        <file>qml/ButtonDelegate.qml</file>
+        <file>qml/methods/AppendWords.qml</file>
+        <file>qml/BackButton.qml</file>
+        <file>qml/StepLabel.qml</file>
+        <file>qml/methods/PrependWords.qml</file>
+        <file>qml/methods/ReplaceWords.qml</file>
+        <file>qml/RainingParticle.qml</file>
+        <file>qml/methods/ReplaceSuffix.qml</file>
+        <file>qml/methods/RemoveWords.qml</file>
+        <file>qml/methods/InsertWords.qml</file>
+        <file>qml/methods/PrependZeroOnNum.qml</file>
+        <file>qml/methods/RegexUsingCaptures.qml</file>
+        <file>qml/methods/RegexNumbering.qml</file>
+        <file>qml/methods/RegexGlobalModifier.qml</file>
+        <file>qml/TutorialSteps.qml</file>
+        <file>qml/FilterList.qml</file>
+        <file>qml/ListStackView.qml</file>
+        <file>qml/filter/Exclude.qml</file>
+        <file>qml/filter/Include.qml</file>
+        <file>qml/filter/RemoveFilter.qml</file>
+        <file>qml/Miscellaneous.qml</file>
+        <file>qml/miscellaneous/AddFolderRecursive.qml</file>
+        <file>qml/miscellaneous/SpanHeader.qml</file>
+    </qresource>
+</RCC>

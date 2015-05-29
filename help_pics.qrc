@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>helps/pics/methods/appendWords00.png</file>
+        <file>helps/pics/methods/selectFolder.png</file>
+        <file>helps/pics/methods/appendWords01.png</file>
+        <file>helps/pics/methods/renameFiles.png</file>
+        <file>helps/pics/methods/prependWords00.png</file>
+        <file>helps/pics/methods/prependWords01.png</file>
+        <file>helps/pics/methods/replaceWords00.png</file>
+        <file>helps/pics/methods/replaceWords01.png</file>
+    </qresource>
+</RCC>
