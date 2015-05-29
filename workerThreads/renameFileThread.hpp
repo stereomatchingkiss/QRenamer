@@ -55,7 +55,7 @@ private:
     //indexes store the row number of source
     //but not the row number of proxy model
     //This is the reason why source_index_ exist
-    QVector<QModelIndex> source_indexes;
+    QVector<QModelIndex> source_indexes_;
 };
 
 #endif // RENAMEFILETHREAD_HPP

@@ -64,7 +64,7 @@ void renameFileThread::set_old_suffix(QStringList suffix) Q_DECL_NOEXCEPT
 
 void renameFileThread::set_source_indexes(QVector<QModelIndex> indexes) Q_DECL_NOEXCEPT
 {
-    source_indexes = indexes;
+    source_indexes_ = indexes;
 }
 
 void renameFileThread::rename(int Row)
@@ -96,9 +96,9 @@ void renameFileThread::run()
     revert_map_.second.clear();
 
     if(!enable_revert_){        
-        for(decltype(source_indexes.size()) i = 0; i
-            != source_indexes.size(); ++i){
-            rename(source_indexes[i].row());
+        for(decltype(source_indexes_.size()) i = 0; i
+            != source_indexes_.size(); ++i){
+            rename(source_indexes_[i].row());
             emit increment(i);
         }
     }else{
