@@ -613,7 +613,8 @@ void MainWindow::on_actionHelp_triggered()
 
     help_reader_.reset(new quickCloseSignal);
 
-    connect(help_reader_.get(), SIGNAL(widget_close()), this, SLOT(close_help_reader()));
+    connect(help_reader_.get(), &quickCloseSignal::widget_close, this,
+            &MainWindow::close_help_reader);
 
     help_reader_->setSource(QUrl(LOCATION));
     help_reader_->setResizeMode(QQuickWidget::SizeRootObjectToView);
