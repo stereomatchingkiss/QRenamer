@@ -501,7 +501,7 @@ void MainWindow::show_suffix(bool enable)
 bool MainWindow::view_is_empty() const Q_DECL_NOEXCEPT
 {
     ui->fileView->selectAll();
-    bool const IsEmpty = ui->fileView->selectionModel()->selectedRows().isEmpty();    
+    auto const IsEmpty = ui->fileView->selectionModel()->selectedRows().isEmpty();
     ui->fileView->clearSelection();
 
     return IsEmpty;
@@ -609,7 +609,7 @@ void MainWindow::on_actionRemovefilter_triggered()
 
 void MainWindow::on_actionHelp_triggered()
 {
-    QString const LOCATION = QStringLiteral("qrc:/qml/Main.qml");
+    auto const LOCATION = QStringLiteral("qrc:/qml/Main.qml");
 
     help_reader_.reset(new quickCloseSignal);
 
