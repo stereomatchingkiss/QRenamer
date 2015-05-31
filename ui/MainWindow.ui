@@ -14,7 +14,7 @@
    <bool>false</bool>
   </property>
   <property name="windowTitle">
-   <string>Cute Renamer</string>
+   <string>QRenamer</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../pics.qrc">
@@ -492,6 +492,8 @@
    <addaction name="actionRevert"/>
    <addaction name="actionFilter"/>
    <addaction name="actionRemovefilter"/>
+   <addaction name="actionHelp"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
