@@ -25,7 +25,7 @@ public:
     QStringList old_suffix_;
     QStringList old_base_name_;
 
-    QVector<QModelIndex> source_indexes_;
+    std::vector<QModelIndex> source_indexes_;
     QVector<bool> match_regex_file_;
 };
 

@@ -228,12 +228,12 @@ void MainWindow::build_table()
     rename_policy_.emplace(ReplaceSuffix, std::bind(&MainWindow::replace_suffix, this));
 }
 
-QVector<QModelIndex> MainWindow::map_proxy_index_to_source_index() const
+std::vector<QModelIndex> MainWindow::map_proxy_index_to_source_index() const
 {
-    QVector<QModelIndex> results;
+    std::vector<QModelIndex> results;
     auto const Indexes = ui->fileView->selectionModel()->selectedRows();
     for(auto const &Index : Indexes){
-        results.push_back(sort_filter_file_->mapToSource(Index));
+        results.emplace_back(sort_filter_file_->mapToSource(Index));
     }
 
     return results;
@@ -450,7 +450,7 @@ void MainWindow::on_renameFileButton_clicked()
     ui->actionRevert->setEnabled(true);
     ui->fileView->clearSelection();
 
-    file_model_->set_selected_index(source_indexes);
+    file_model_->set_selected_index(std::move(source_indexes));
     file_model_->rename_files();
 }
 

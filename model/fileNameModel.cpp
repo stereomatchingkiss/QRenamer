@@ -424,10 +424,10 @@ bool fileNameModel::setData(const QModelIndex &index, const QVariant &value, int
     return true;
 }
 
-void fileNameModel::set_selected_index(QVector<QModelIndex> indexes)
+void fileNameModel::set_selected_index(std::vector<QModelIndex> &&indexes)
 {
-    item_->source_indexes_ = indexes;
-    rename_file_thread_->set_source_indexes(indexes);
+    item_->source_indexes_ = std::move(indexes);
+    rename_file_thread_->set_source_indexes(item_->source_indexes_);
 }
 
 void fileNameModel::update_file(const QStringList &files)
@@ -456,7 +456,7 @@ void fileNameModel::add_dirs_recursive_end_slot()
 
 void fileNameModel::rename_file_finished()
 {
-    auto const NotRevert = !item_->source_indexes_.isEmpty();
+    auto const NotRevert = !item_->source_indexes_.empty();
     if(NotRevert){
         for(auto const &Index : item_->source_indexes_){
             auto const Row = Index.row();

@@ -128,7 +128,7 @@ private:
     void enable_filter_action(bool value);
     void enable_remove_filter(bool value);
     void insert_words();
-    QVector<QModelIndex> map_proxy_index_to_source_index() const;
+    std::vector<QModelIndex> map_proxy_index_to_source_index() const;
     void open_directory();
     void prepend_words();
     void regex_replace();

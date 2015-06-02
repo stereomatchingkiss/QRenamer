@@ -30,7 +30,7 @@ public:
     void set_new_suffix(QStringList suffix) Q_DECL_NOEXCEPT;
     void set_old_file_names(QStringList old_file_names) Q_DECL_NOEXCEPT;
     void set_old_suffix(QStringList suffix) Q_DECL_NOEXCEPT;
-    void set_source_indexes(QVector<QModelIndex> indexes) Q_DECL_NOEXCEPT;
+    void set_source_indexes(std::vector<QModelIndex> const &indexes) Q_DECL_NOEXCEPT;
 
     void rename(int Row);
 signals:
@@ -55,7 +55,7 @@ private:
     //indexes store the row number of source
     //but not the row number of proxy model
     //This is the reason why source_index_ exist
-    QVector<QModelIndex> source_indexes_;
+    std::vector<QModelIndex> const *source_indexes_;
 };
 
 #endif // RENAMEFILETHREAD_HPP

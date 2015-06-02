@@ -70,7 +70,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
-    void set_selected_index(QVector<QModelIndex> indexes);    
+    void set_selected_index(std::vector<QModelIndex> &&indexes);
 
     void update_file(QStringList const &files);
 
