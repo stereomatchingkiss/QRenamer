@@ -529,6 +529,7 @@ void MainWindow::on_policyTabWidget_currentChanged(int index)
     }
     file_model_->clear_match_regex_file();
     update_new_file_names();
+    ui->fileView->reset();
 }
 
 void MainWindow::on_actionRevert_triggered(bool)
