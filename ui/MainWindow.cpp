@@ -259,12 +259,12 @@ void MainWindow::rename_file_fisnished()
         view.resizeColumnsToContents();
         view.resize(QSize{view.width(), view.height()});
         view.show();        
-        loop.exec();
-    }else{
-        ui->fileView->reset();
-        if(file_model_->rowCount() != 0){
-            enable_action_when_file_exist(true);
-        }
+        loop.exec();                
+    }
+
+    ui->fileView->reset();
+    if(file_model_->rowCount() != 0){
+        enable_action_when_file_exist(true);
     }
 }
 
