@@ -245,7 +245,7 @@ bool fileNameModel::insertRows(int row, int count, const QModelIndex&)
 
 QStringList fileNameModel::mimeTypes() const
 {
-    return {"text/uri-list"};
+    return QStringList()<<"text/uri-list";
 }
 
 /**
