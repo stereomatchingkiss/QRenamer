@@ -15,15 +15,15 @@ Rectangle {
         id: miscellaneous_page_model
         ListElement {
             title: "Add folder recursive"
-            page: "miscellaneous/AddFolderRecursive.qml"
+            page: "qrc:/miscellaneous/AddFolderRecursive.qml"
         }
         ListElement {
             title: "Span header"
-            page: "miscellaneous/SpanHeader.qml"
+            page: "qrc:/miscellaneous/SpanHeader.qml"
         }        
         ListElement {
             title: "Back"
-            page: "BackButton.qml"
+            page: "qrc:/BackButton.qml"
         }
     }
 

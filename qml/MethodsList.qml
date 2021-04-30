@@ -17,47 +17,47 @@ Rectangle {
         id: method_page_model
         ListElement {
             title: "Append words"
-            page: "methods/AppendWords.qml"
+            page: "qrc:/methods/AppendWords.qml"
         }
         ListElement {
             title: "Insert words"
-            page: "methods/InsertWords.qml"
+            page: "qrc:/methods/InsertWords.qml"
         }
         ListElement {
             title: "Prepend words"
-            page: "methods/PrependWords.qml"
+            page: "qrc:/methods/PrependWords.qml"
         }
         ListElement {
             title: "Prepend zero on number"
-            page: "methods/PrependZeroOnNum.qml"
+            page: "qrc:/methods/PrependZeroOnNum.qml"
         }
         ListElement {
             title: "Regex--Global modifier"
-            page: "methods/RegexGlobalModifier.qml"
+            page: "qrc:/methods/RegexGlobalModifier.qml"
         }
         ListElement {
             title: "Regex--Numbering files"
-            page: "methods/RegexNumbering.qml"
+            page: "qrc:/methods/RegexNumbering.qml"
         }
         ListElement {
             title: "Regex--Using captures"
-            page: "methods/RegexUsingCaptures.qml"
+            page: "qrc:/methods/RegexUsingCaptures.qml"
         }
         ListElement {
             title: "Remove words"
-            page: "methods/RemoveWords.qml"
+            page: "qrc:/methods/RemoveWords.qml"
         }
         ListElement {
             title: "Replace suffix"
-            page: "methods/ReplaceSuffix.qml"
+            page: "qrc:/methods/ReplaceSuffix.qml"
         }
         ListElement {
             title: "Replace words"
-            page: "methods/ReplaceWords.qml"
+            page: "qrc:/methods/ReplaceWords.qml"
         }
         ListElement {
             title: "Back"
-            page: "BackButton.qml"
+            page: "qrc:/BackButton.qml"
         }
     }
 

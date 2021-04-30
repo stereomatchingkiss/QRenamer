@@ -15,19 +15,19 @@ Rectangle {
         id: filter_page_model
         ListElement {
             title: "Exclude"
-            page: "filter/Exclude.qml"
+            page: "qrc:/filter/Exclude.qml"
         }
         ListElement {
             title: "Include"
-            page: "filter/Include.qml"
+            page: "qrc:/filter/Include.qml"
         }        
         ListElement {
             title: "Remove filter"
-            page: "filter/RemoveFilter.qml"
+            page: "qrc:/filter/RemoveFilter.qml"
         }
         ListElement {
             title: "Back"
-            page: "BackButton.qml"
+            page: "qrc:/BackButton.qml"
         }
     }
 

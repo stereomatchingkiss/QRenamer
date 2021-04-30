@@ -14,15 +14,15 @@ Rectangle{
         id: page_model
         ListElement {
             title: "Methods"
-            page: "MethodsList.qml"
+            page: "qrc:/MethodsList.qml"
         }
         ListElement {
             title: "Filter"
-            page: "FilterList.qml"
+            page: "qrc:/FilterList.qml"
         }
         ListElement {
             title: "Miscellaneous"
-            page: "Miscellaneous.qml"
+            page: "qrc:/Miscellaneous.qml"
         }
     }
 
