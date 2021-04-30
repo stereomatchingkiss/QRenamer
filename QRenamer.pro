@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += concurrent core gui quickwidgets
+QT       += concurrent core gui quickwidgets quick
 
 CONFIG += c++11
 
@@ -53,5 +53,5 @@ FORMS    += ui/MainWindow.ui \
 
 RESOURCES += \
     pics.qrc \
-    qml.qrc \
+    qml/qml.qrc \
     js.qrc
