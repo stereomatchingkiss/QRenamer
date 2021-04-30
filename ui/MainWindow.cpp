@@ -610,7 +610,7 @@ void MainWindow::on_actionRemovefilter_triggered()
 
 void MainWindow::on_actionHelp_triggered()
 {
-    auto const LOCATION = QStringLiteral("qrc:/qml/Main.qml");
+    auto const LOCATION = QStringLiteral("qrc:/Main.qml");
 
     help_reader_.reset(new quickCloseSignal);
 
@@ -631,6 +631,7 @@ void MainWindow::on_actionIcons_triggered()
 void MainWindow::on_actionReference_triggered()
 {
     QMessageBox::information(this, tr("Reference"),
-                             tr("The regex functions of this app is reference to regexrenamer(http://regexrenamer.sourceforge.net/),\n"
+                             tr("The regex functions of this app is reference to regexrenamer"
+                                "(http://regexrenamer.sourceforge.net/),\n"
                                 "many functions and tutorials are inspired by it"));
 }
