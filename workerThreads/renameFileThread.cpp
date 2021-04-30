@@ -100,7 +100,7 @@ void renameFileThread::run()
         for(decltype(source_indexes_->size()) i = 0; i
             != source_indexes_->size(); ++i){
             rename((*source_indexes_)[i].row());
-            emit increment(i);
+            emit increment(static_cast<int>(i));
         }
     }else{
         //if revert, the fileNameModel will setup
