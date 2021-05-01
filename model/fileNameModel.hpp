@@ -29,12 +29,13 @@ class fileNameModel : public QAbstractTableModel
 
 public:
     explicit fileNameModel(QObject *parent = nullptr);
-    ~fileNameModel();
+    ~fileNameModel() override;
 
     void add_dirs_recursive(QString const &dir_path);
     void append_number_on_last_match(int length);
     void append_number_on_nth_match(int length, int position);
     void append_words(QString const &words);
+    void change_name_with_increase_num(QString const &change_file_name_to, int zero_fill);
 
     int columnCount(const QModelIndex &parent) const override;
     void clear_all();

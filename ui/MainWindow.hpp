@@ -117,12 +117,17 @@ private slots:
 
     void on_actionReference_triggered();
 
+    void on_lineEditChangeToFileName_textChanged(const QString &arg1);
+
+    void on_spinBoxZeroFill_valueChanged(int arg1);
+
 private:
     void add_directory(QString const &dir);
     void add_files();
     void append_words();
     void build_table();
     void build_connection();
+    void change_name_with_increase_num();
     void enable_action_when_file_exist(bool value);
     void enable_delete_action(bool value);
     void enable_filter_action(bool value);

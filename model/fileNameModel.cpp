@@ -84,6 +84,16 @@ void fileNameModel::append_words(QString const &words)
     });
 }
 
+void fileNameModel::change_name_with_increase_num(const QString &change_file_name_to, int zero_fill)
+{
+    item_->new_base_name_ = item_->old_base_name_;
+    int index = 0;
+    QtConcurrent::blockingMap(item_->new_base_name_, [=, &index](QString &name)
+    {
+        name = QString("%1_%2").arg(change_file_name_to).arg(index++, zero_fill, 10, QChar('0'));
+    });
+}
+
 int fileNameModel::columnCount(const QModelIndex&) const
 {
     return static_cast<int>(fileNameHeader::LastElem);

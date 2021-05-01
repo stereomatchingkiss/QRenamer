@@ -31,6 +31,7 @@ auto const RegexReplace = QStringLiteral("Regex");
 auto const RemoveWords = QStringLiteral("Remove words");
 auto const ReplaceBase = QStringLiteral("Replace words");
 auto const ReplaceSuffix = QStringLiteral("Replace suffix");
+QString const ChangeNameWithIncreaseNum = "Change name with increase num";
 
 }
 
@@ -209,6 +210,12 @@ void MainWindow::build_connection()
             &MainWindow::regex_replace_and_reset_view);
 }
 
+void MainWindow::change_name_with_increase_num()
+{
+    file_model_->change_name_with_increase_num(ui->lineEditChangeToFileName->text(),
+                                               ui->spinBoxZeroFill->value());
+}
+
 void MainWindow::enable_action_when_file_exist(bool value)
 {
     enable_delete_action(value);
@@ -226,6 +233,7 @@ void MainWindow::build_table()
     rename_policy_.emplace(RemoveWords, std::bind(&MainWindow::remove_words, this));
     rename_policy_.emplace(ReplaceBase, std::bind(&MainWindow::replace_text, this));
     rename_policy_.emplace(ReplaceSuffix, std::bind(&MainWindow::replace_suffix, this));
+    rename_policy_.emplace(ChangeNameWithIncreaseNum, std::bind(&MainWindow::change_name_with_increase_num, this));
 }
 
 std::vector<QModelIndex> MainWindow::map_proxy_index_to_source_index() const
@@ -325,9 +333,8 @@ void MainWindow::replace_text()
 
 void MainWindow::update_new_file_names()
 {
-    auto const RenamePolicy = ui->policyTabWidget->tabText(ui->policyTabWidget->currentIndex());
-    auto const It = rename_policy_.find(RenamePolicy);
-    if(It != std::end(rename_policy_)){
+    auto const RenamePolicy = ui->policyTabWidget->tabText(ui->policyTabWidget->currentIndex());    
+    if(auto const It = rename_policy_.find(RenamePolicy); It != std::end(rename_policy_)){
         It->second();
     }else{
         QMessageBox::warning(this, tr("Update fail"),
@@ -634,4 +641,14 @@ void MainWindow::on_actionReference_triggered()
                              tr("The regex functions of this app is reference to regexrenamer"
                                 "(http://regexrenamer.sourceforge.net/),\n"
                                 "many functions and tutorials are inspired by it"));
+}
+
+void MainWindow::on_lineEditChangeToFileName_textChanged(const QString&)
+{
+    change_name_with_increase_num();
+}
+
+void MainWindow::on_spinBoxZeroFill_valueChanged(int)
+{
+    change_name_with_increase_num();
 }
